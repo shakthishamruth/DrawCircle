@@ -11,9 +11,9 @@ class OvalPanel extends JPanel {
         g.fillOval(50, 75, diameter, diameter);
     }
 
-    // validate and set diameter, then repaint
+    // Validate and set diameter, then repaint
     public void setDiameter(int newDiameter) {
-        // if diameter invalid, default to 10
+        // If diameter invalid, default to 10
         diameter = (newDiameter >= 5 ? newDiameter : 6);
         repaint();
     }
@@ -23,7 +23,7 @@ class OvalPanel extends JPanel {
         return new Dimension(200, 200);
     }
 
-    // used by layout manager to determine minimum size
+    // Used by layout manager to determine minimum size
     public Dimension getMinimumSize() {
         return getPreferredSize();
     }
@@ -43,7 +43,7 @@ public class Draw extends JFrame {
         label = new JLabel("0");
         label.setFont(new Font("Serif", Font.BOLD + Font.ITALIC, 14));
         can.add(label);
-        // button
+        // Button
         JButton button = new JButton("Click");
         can.add(button);
         button.addActionListener(e -> {
